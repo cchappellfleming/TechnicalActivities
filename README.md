@@ -13,8 +13,8 @@ Leading open-source Java Script Library for interactive maps. Designed with simp
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
 ```
-3. div element with id 'map' within the body. Additional css included in the style element in the head section of the page.
+3. div element with id 'map' within the body. Additional css included in the style element to facilitate the desired size of the map on the page. 
 
-4. 
+## Displaying the map
 
 
