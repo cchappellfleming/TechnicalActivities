@@ -26,7 +26,7 @@
 </head>
 <body>
 
-<div id= 'map'></div>
+<div id='map'></div>
 
 <script src="sample-geojson.js" type="text/javascript"></script>
 
@@ -41,12 +41,31 @@
     zoomOffset: -1,
     }).addTo(map);
    
-	var baseballIcon = L.icon({
-		iconUrl: 'baseball-marker.png',
-		iconSize: [32, 37],
-		iconAnchor: [16, 37],
-		popupAnchor: [0, -28]
-	});
+
+    var myLines = [{
+        "type": "LineString",
+        "coordinates": [[-100, 40], [-105, 45], [-110, 55]]
+    }, {
+        "type": "LineString",
+        "coordinates": [[-105, 40], [-110, 45], [-115, 55]]
+    }];
+
+    var myStyle = {
+        "color": "#ff7800",
+        "weight": 5,
+        "opacity": 0.65
+    };
+
+    L.geoJSON(myLines, {
+        style: myStyle
+    }).addTo(map);
+
+	// var baseballIcon = L.marker({
+	// 	// iconUrl: 'baseball-marker.png',
+	// 	iconSize: [32, 37],
+	// 	iconAnchor: [16, 37],
+	// 	popupAnchor: [0, -28]
+	// });
 
 	function onEachFeature(feature, layer) {
 		var popupContent = '<p>I started out as a GeoJSON ' +
@@ -79,17 +98,17 @@
 		}
 	}).addTo(map);
 
-	var freeBusLayer = L.geoJSON(freeBus, {
+	// var freeBusLayer = L.geoJSON(freeBus, {
 
-		filter: function (feature, layer) {
-			if (feature.properties) {
-				return feature.properties.underConstruction !== undefined ? !feature.properties.underConstruction : true;
-			}
-			return false;
-		},
+	// 	// filter: function (feature, layer) {
+	// 	// 	if (feature.properties) {
+	// 	// 		return feature.properties.underConstruction !== undefined ? !feature.properties.underConstruction : true;
+	// 	// 	}
+	// 	// 	return false;
+	// 	// },
 
-		onEachFeature: onEachFeature
-	}).addTo(map);
+	// 	onEachFeature: onEachFeature
+	// }).addTo(map);
 
 	var coorsLayer = L.geoJSON(coorsField, {
 
