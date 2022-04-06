@@ -7,13 +7,14 @@ Leading open-source Java Script Library for interactive maps. Designed with simp
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
 ```
-1. Include leaflet JavaScript reference after CSS reference
+2. Include leaflet JavaScript reference after CSS reference
 ```
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
 ```
-#### div element with id within body of page
-### Setting up the map
-#### Example 
+3. div element with id 'map' within the body. Additional css included in the style element in the head section of the page.
+
+4. 
+
 
